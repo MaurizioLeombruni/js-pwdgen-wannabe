@@ -5,14 +5,22 @@ let primo = prompt("Inserisci il primo numero");
 let secondo = prompt("Inserisci il secondo numero");
 let numero = 0;
 
-if (secondo !== 0){
+/*if (secondo !== 0){
     console.log("All clear, dividing");
     numero = Math.floor(primo/secondo);
 } else {
     console.log("How about no KEKW");
     numero = primo;
+} */
+
+primo=parseInt(primo);
+secondo=parseInt(secondo);
+while(secondo === 0){
+    secondo = prompt("Evitiamo di dividere per 0, eh? Altro numero?");
+    secondo=parseInt(secondo)
 }
 
+numero=Math.floor(primo/secondo);
 console.log(numero);
 document.getElementById("p-nome").innerHTML = nome;
 document.getElementById("p-cognome").innerHTML = cognome;
